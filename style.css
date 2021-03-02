@@ -22,23 +22,12 @@ footer{
     text-align: center;
 }
 #main-top{
-    height: 400px;    
+    height: 400px;
     margin: 10px 0 10px 0;
     background-image: url(img/banner.jpg);
     background-size: cover;
     background-position-y: center;
     border-radius: 10px;
-}
-#main-bot{
-    height: 500px;
-    background-color:blue;
-}
-#main-bot > h1{
-    height: 50px;
-}
-#main-bot > h1,
-#main-bot > div > *{
-    background-color: cornflowerblue;
 }
 #main-bot > div{
     height: 90%;
@@ -64,7 +53,6 @@ footer{
     display: table;
     clear: both;
 }
-
 header img{
     height: 60px;
     padding-right: 30px;
@@ -90,9 +78,7 @@ section div.contenuto{
 }
 .contenuto{
     padding: 180px 50px;
-}
-main div p{
-    color: lightgrey;
+    color: white;
 }
 .img-A{
     width: 100%;
@@ -105,7 +91,6 @@ main div p{
  .A{
     width: 20%;
     display: inline-block;
-    float: left;
     height: 80%;
 }
 .img-B{
@@ -127,8 +112,10 @@ main div p{
  }
  .B{
     display: inline-block;
-    float: left;
     margin: 0 1% 0 1%;
     width: 58%;
     height: 80%;
+}
+#main-bot p{
+    color: lightgrey;
 }
