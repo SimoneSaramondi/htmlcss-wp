@@ -4,52 +4,67 @@
     box-sizing: border-box;
     font-family: 'Nanum Gothic', sans-serif;
 }
-/* Struttura per dividere in blocchi */
-body{    
-    width: 1000px;
-    margin: auto;
-}
-.container::after{
-    content: "";
-    display: table;
-    clear: both;
+body{
+   width: 70%;
+   margin: auto;
 }
 header{
+    height: 100px;
     border-radius: 10px;
 }
-section{
-    height: 400px;
+body > *:not(footer),
+main > section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 10px;
+    text-align: center;
+}
+#main-top{
+    height: 400px;    
     margin: 10px 0 10px 0;
     background-image: url(img/banner.jpg);
     background-size: cover;
     background-position-y: center;
     border-radius: 10px;
 }
-main{
-    height: 460px;
+#main-bot{
+    height: 500px;
+    background-color:blue;
 }
-#libero{
-    margin-bottom: 1%;
+#main-bot > h1{
+    height: 50px;
 }
-.A{
-    width: 20%;
-    display: inline-block;
+#main-bot > h1,
+#main-bot > div > *{
+    background-color: cornflowerblue;
+}
+#main-bot > div{
+    height: 90%;
+    padding: 10px 0 10px 0;
+}
+#main-bot aside,
+#main-bot article{
+    height: 100%;
     float: left;
-    height: 80%;
-   /* margin-bottom: 1%;*/
 }
-.B{
-    display: inline-block;
-    float: left;
-    margin: 0 1% 0 1%;
-    width: 58%;
-    height: 80%;
+#main-bot aside{
+    width: 25%;
 }
-footer{
-    margin-top: 10px;
-    text-align: center;
+#main-bot article{
+    /*calc usato in questo modo mi da una larghezza del 50% e toglie 20px al margin*/
+    width: calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
 }
-/* Struttura per lavorare sui contenuti */
+.clearfix::after{
+    /*::after mi permette di inserire qualcosa dopo,in questo caso, il clearfix*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
 header img{
     height: 60px;
     padding-right: 30px;
@@ -66,7 +81,10 @@ header nav ul li{
 .distanziamento{
     padding: 0 5px 0 5px;
 }
-section div{
+span{
+    color: red;
+}
+section div.contenuto{
     width: 500px;
     color: white;
 }
@@ -77,12 +95,18 @@ main div p{
     color: lightgrey;
 }
 .img-A{
-   width: 100%;
-   height: 200px;
-   background-image: url(img/img-1.jpg);
-   background-size: cover;
-   background-position-y: center;
-   border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    background-image: url(img/img-1.jpg);
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 10px;
+ }
+ .A{
+    width: 20%;
+    display: inline-block;
+    float: left;
+    height: 80%;
 }
 .img-B{
     width: 100%;
@@ -101,6 +125,10 @@ main div p{
     background-position-y: center;
     border-radius: 10px;
  }
- span{
-     color: red;
- }
+ .B{
+    display: inline-block;
+    float: left;
+    margin: 0 1% 0 1%;
+    width: 58%;
+    height: 80%;
+}
